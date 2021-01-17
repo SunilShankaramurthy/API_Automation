@@ -1,11 +1,11 @@
 # Intigral-Ott_PopcornAPI
 
-#Table of Content
+# Table of Content
 - [Description](#description)
 - [Architecture](#architecture)
 - [PreRequisite](#prerequisite)
 - [Run-Command](#run-command)
-- [Conclusion](#conclusion)
+- [Report](#report)
 
 ## Description
    This project contains Inteigral-ott.net popcorn API verification and validation TestCases.
@@ -22,9 +22,19 @@
   Java 8
   
 ## Run-Command
-  1. To run the Test on Non-Prod
-      mvn clean install -Denv=nonProd -Dsuite=PopcornAPI -DthreadCount=4  
-  2.  To run the test on Pre-Prod
-      mvn clean install -Denv=PreProd -Dsuite=PopcornAPI -DthreadCount=4
+  1. To run the Test on Non-Prod<br/>
+      mvn clean install -Denv=nonProd -Dsuite=PopcornAPI -DthreadCount=2 <br/>
       
+  2.  To run the test on Pre-Prod<br/>
+      mvn clean install -Denv=PreProd -Dsuite=PopcornAPI -DthreadCount=2<br/>
       
+      ** threadCount is used for parallel running. 
+      
+## Report
+   The framework will generate 2 test reports<br/>
+   1. TestNG ExtentReport <br/>
+      Path : project.dir/reports/Intigral-ott-popcorn-report.html<br/>
+      <br/>
+   2. TestNG default Report <br/>
+      path : project.dir/target/surefire-reports/index.html
+         
