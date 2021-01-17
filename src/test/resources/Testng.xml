@@ -6,12 +6,12 @@
     </listeners>
     <test name="API Testing">
         <classes>
-              <class name="com.testcases.Popcorn">
-                  <methods>
-                     <!-- <include name="get_PromotionAPI_StatusCode"></include>-->
+              <class name="com.testcases.Intigral_Ott_Promotions">
 
-                  </methods>
               </class>
+            <class name="com.testcases.Intigral_Ott_Promotions_API_ErrorHandling">
+
+            </class>
         </classes>
 
     </test>

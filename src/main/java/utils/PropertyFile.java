@@ -14,22 +14,25 @@ public class PropertyFile {
         String environment=System.getProperty("env");
         try{
             if(environment.equalsIgnoreCase("nonprod")){
-                FileInputStream nonProdFile=new FileInputStream("input/nonprod.properties");
+                FileInputStream nonProdFile=new FileInputStream("src/main/resources/nonProd.properties");
                 propMain.load(nonProdFile);
                 envProp.put("ServerUrl",propMain.getProperty("ServerUrl"));
-                envProp.put("InvalidAPIKey",propMain.getProperty("InvalidAPIKey"));
-                envProp.put("APIKey",propMain.getProperty("apikey"));
+
 
 
          /*
           *  future use
           */
-            } else if(environment.equalsIgnoreCase("pre-prod")){
-                FileInputStream preProdFile=new FileInputStream(System.getProperty("user.dir")+"/src/main/resources/preprod.properties");
+            } else if(environment.equalsIgnoreCase("preProd")){
+                FileInputStream preProdFile=new FileInputStream(
+                        "src/main/resources/preProd.properties");
                 propMain.load(preProdFile);
-                envProp.put("baseURI",propMain.getProperty("baseURI"));
+                envProp.put("ServerUrl",propMain.getProperty("ServerUrl"));
                 envProp.put("InvalidAPIKey",propMain.getProperty("InvalidAPIKey"));
+                envProp.put("promotionsAPISuccessStatusCode",propMain.getProperty("promotionsAPISuccessStatusCode"));
             }
+            envProp.put("promotionsAPISuccessStatusCode",propMain.getProperty("promotionsAPISuccessStatusCode"));
+            envProp.put("promotionsAPIInvalidAPIKeyStatusCode",propMain.getProperty("promotionsAPIInvalidAPIKeyStatusCode"));
 
         }catch(Exception e){
 

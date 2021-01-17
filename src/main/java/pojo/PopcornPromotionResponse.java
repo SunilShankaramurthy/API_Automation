@@ -1,4 +1,4 @@
-package apiBuilders;
+package pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;

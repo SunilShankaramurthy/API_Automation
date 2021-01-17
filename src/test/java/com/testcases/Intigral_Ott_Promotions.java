@@ -1,15 +1,10 @@
 package com.testcases;
 
 
-import apiBuilders.PopcornPromotionResponse;
+import pojo.ErrorResponse;
+import pojo.PopcornPromotionResponse;
 import apiConfigs.APIPath;
-import apiVerification.APIVerification;
-import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.markuputils.ExtentColor;
-import com.aventstack.extentreports.markuputils.Markup;
-import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.baseTest.BaseTest;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.RestAssured;
@@ -20,10 +15,10 @@ import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import org.testng.annotations.TestInstance;
+import utils.PropertyFile;
 
 
-public class Popcorn extends BaseTest {
+public class Intigral_Ott_Promotions extends BaseTest {
     private static RequestSpecification requestSpecification;
     private static Response response;
 
@@ -39,7 +34,8 @@ public class Popcorn extends BaseTest {
     }
     @Test(priority = 0)
     public void get_PromotionAPI_StatusCode(){
-        Assert.assertEquals(response.getStatusCode(),200,"Get Request Response code mismatch -->");
+        Assert.assertEquals(response.getStatusCode(),PropertyFile.envFile().get("promotionsAPISuccessStatusCode")
+                ,"Get Request Response code mismatch -->");
     }
 
     @Test(dependsOnMethods = "get_PromotionAPI_StatusCode")
@@ -128,14 +124,4 @@ public class Popcorn extends BaseTest {
         }
     }
 
-
-        @Test
-        public void invalidAPIKeyValidation () throws JsonProcessingException {
-            requestSpecification = RestAssured.given();
-            response = requestSpecification.request(Method.GET, APIPath.apiPath.INVALID_APIKEY);
-            ErrorResponse err = objectMapper.readValue(new JSONObject(response.getBody().asString()).toString(), ErrorResponse.class);
-            Assert.assertEquals(err.getError().getCode(), "8001");
-        }
-
-
-    }
+}
