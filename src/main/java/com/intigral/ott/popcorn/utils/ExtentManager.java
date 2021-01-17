@@ -9,7 +9,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
  */
 public class ExtentManager {
     private static ExtentReports extentReports;
-    private static final String reportFileName = "Intigral-ott-popcorn-report.html";
+    private static final String reportFileName = "Intigral-ott-popcornAPI-report.html";
     private static final String macPath = System.getProperty("user.dir") + "/reports";
     private static final String windowsPath = System.getProperty("user.dir") + "\\reports";
     private static final String macReportFileLoc = macPath + "/" + reportFileName;
