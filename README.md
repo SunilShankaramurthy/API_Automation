@@ -1,5 +1,4 @@
-# automationCode
-# Intigral-Ott_Promotions
+# Intigral-Ott_PopcornAPI
 
 #Table of Content
 - [Description](#description)
