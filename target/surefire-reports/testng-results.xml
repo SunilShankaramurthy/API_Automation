@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="API Test Suite" duration-ms="2442" started-at="2021-01-17T00:14:02 GMT" finished-at="2021-01-17T00:14:04 GMT">
+    <groups>
+    </groups>
+    <test name="API Testing" duration-ms="2442" started-at="2021-01-17T00:14:02 GMT" finished-at="2021-01-17T00:14:04 GMT">
+      <class name="com.testcases.Popcorn">
+        <test-method status="PASS" signature="baseTest()[pri:0, instance:com.testcases.Popcorn@22ff4249]" name="baseTest" is-config="true" duration-ms="333" started-at="2021-01-17T00:14:02 GMT" finished-at="2021-01-17T00:14:02 GMT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- baseTest -->
+        <test-method status="PASS" signature="getPopCornPromotionData()[pri:0, instance:com.testcases.Popcorn@22ff4249]" name="getPopCornPromotionData" is-config="true" duration-ms="1822" started-at="2021-01-17T00:14:02 GMT" depends-on-methods="com.baseTest.BaseTest.baseTest" finished-at="2021-01-17T00:14:04 GMT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getPopCornPromotionData -->
+        <test-method status="PASS" signature="get_PromotionAPI_StatusCode()[pri:0, instance:com.testcases.Popcorn@22ff4249]" name="get_PromotionAPI_StatusCode" duration-ms="10" started-at="2021-01-17T00:14:04 GMT" finished-at="2021-01-17T00:14:04 GMT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- get_PromotionAPI_StatusCode -->
+        <test-method status="PASS" signature="invalidAPIKeyValidation()[pri:0, instance:com.testcases.Popcorn@22ff4249]" name="invalidAPIKeyValidation" duration-ms="159" started-at="2021-01-17T00:14:04 GMT" finished-at="2021-01-17T00:14:04 GMT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidAPIKeyValidation -->
+        <test-method status="PASS" signature="promotionAPIResponseValidation()[pri:0, instance:com.testcases.Popcorn@22ff4249]" name="promotionAPIResponseValidation" duration-ms="1" started-at="2021-01-17T00:14:04 GMT" depends-on-methods="com.testcases.Popcorn.get_PromotionAPI_StatusCode" finished-at="2021-01-17T00:14:04 GMT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- promotionAPIResponseValidation -->
+        <test-method status="PASS" signature="validate_Image()[pri:0, instance:com.testcases.Popcorn@22ff4249]" name="validate_Image" duration-ms="1" started-at="2021-01-17T00:14:04 GMT" depends-on-methods="com.testcases.Popcorn.get_PromotionAPI_StatusCode" finished-at="2021-01-17T00:14:04 GMT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validate_Image -->
+        <test-method status="PASS" signature="validate_LocalisedText()[pri:0, instance:com.testcases.Popcorn@22ff4249]" name="validate_LocalisedText" duration-ms="0" started-at="2021-01-17T00:14:04 GMT" depends-on-methods="com.testcases.Popcorn.get_PromotionAPI_StatusCode" finished-at="2021-01-17T00:14:04 GMT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validate_LocalisedText -->
+        <test-method status="PASS" signature="ResponseBodyDataValidation()[pri:0, instance:com.testcases.Popcorn@22ff4249]" name="ResponseBodyDataValidation" duration-ms="239" started-at="2021-01-17T00:14:04 GMT" depends-on-methods="com.testcases.Popcorn.get_PromotionAPI_StatusCode" finished-at="2021-01-17T00:14:04 GMT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ResponseBodyDataValidation -->
+        <test-method status="PASS" signature="validate_PromoArea()[pri:0, instance:com.testcases.Popcorn@22ff4249]" name="validate_PromoArea" duration-ms="1" started-at="2021-01-17T00:14:04 GMT" depends-on-methods="com.testcases.Popcorn.get_PromotionAPI_StatusCode" finished-at="2021-01-17T00:14:04 GMT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validate_PromoArea -->
+        <test-method status="PASS" signature="validate_Properties()[pri:0, instance:com.testcases.Popcorn@22ff4249]" name="validate_Properties" duration-ms="2" started-at="2021-01-17T00:14:04 GMT" depends-on-methods="com.testcases.Popcorn.get_PromotionAPI_StatusCode" finished-at="2021-01-17T00:14:04 GMT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validate_Properties -->
+      </class> <!-- com.testcases.Popcorn -->
+    </test> <!-- API Testing -->
+  </suite> <!-- API Test Suite -->
+</testng-results>
