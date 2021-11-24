@@ -1,4 +1,4 @@
-# Intigral-Ott_PopcornAPI
+# API Automation Java-RestAssured-TestNG Framework
 
 ## Table of Content
 - [Description](#description)
@@ -8,7 +8,7 @@
 - [Report](#report)
 
 ## Description
-   This project contains Inteigral-ott.net popcorn API verification and validation TestCases.
+   This project contains public API verification and validation TestCases.
 ## Architecture
   This is a Maven project developed using Java RestAssured and TestNG.<br/>
     - Maven take cares of dependency jars and plugins.<br/>
